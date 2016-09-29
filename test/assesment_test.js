@@ -424,7 +424,16 @@ describe('phone calls', function() {
 describe('total number of calls for each provider', function(){
 
   it('shoul return total number of call to MTN', function(){
-    assert.deepEqual();
+    assert.deepEqual(callsForSpecificProvider.totalNoOfCalls(billObject), 2);
   })
 
 })
+
+
+// /describe("What are the total earnings for each taxi?", function() {
+//   it("should give the total earnings for each taxi in CPT", function() {
+//     assert.deepEqual(earningsForEachTaxi(capeTownTaxis), {
+//       "CA 123 456": 249,
+//       "CA 234 567": 132,
+//       "CA 345 678": 234
+//     });
