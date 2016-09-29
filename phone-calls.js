@@ -22,8 +22,20 @@ exports.totalNoOfCalls = function(billObject){
 
         totalNoOfCalls[calls.provider] ++
     })
-    console.log(totalNoOfCalls);
+    // console.log(totalNoOfCalls);
     return totalNoOfCalls;
 };
 
-  
+exports.durationInSeconds = function(billObject){
+  var durationList = [];
+
+  billObject.forEach(function(calls){
+    var duration = calls.duration.split('-');
+    var durationInSec = Number(duration[0]*3600) + Number(duration[1]*60) + Number(duration[2]);
+      console.log(durationInSec);
+
+      durationList.push(durationInSec);
+  });
+  console.log(durationList);
+  return durationList;
+}

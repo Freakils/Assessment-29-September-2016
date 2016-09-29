@@ -66,7 +66,7 @@ describe('mapping the bill', function() {
       date: '10/10/2015',
       provider: 'Vodacom',
       cellNum: '0828907600',
-      duration: '00-00h56s'
+      duration: '00-00-56'
     }, {
       date: '10/10/2015',
       provider: 'CellC',
@@ -131,7 +131,7 @@ describe('mapping the bill', function() {
       date: '17/10/2015',
       provider: 'Vodacom',
       cellNum: '0828009712',
-      duration: '00-00h56s'
+      duration: '00-00-56'
     }, {
       date: '18/10/2015',
       provider: 'MTN',
@@ -247,7 +247,7 @@ var billObject = [{
   date: '10/10/2015',
   provider: 'Vodacom',
   cellNum: '0828907600',
-  duration: '00-00h56s'
+  duration: '00-00-56'
 }, {
   date: '10/10/2015',
   provider: 'CellC',
@@ -312,7 +312,7 @@ var billObject = [{
   date: '17/10/2015',
   provider: 'Vodacom',
   cellNum: '0828009712',
-  duration: '00-00h56s'
+  duration: '00-00-56'
 }, {
   date: '18/10/2015',
   provider: 'MTN',
@@ -433,3 +433,46 @@ describe('total number of calls for each provider', function() {
   })
 
 });
+
+describe('', function() {
+
+  it('should return', function() {
+    var durationList = [334,
+      94,
+      34,
+      154,
+      394,
+      334,
+      124,
+      76,
+      184,
+      161,
+      551,
+      56,
+      100,
+      334,
+      94,
+      34,
+      127,
+      394,
+      334,
+      159,
+      76,
+      184,
+      161,
+      551,
+      56,
+      100,
+      334,
+      94,
+      34,
+      154,
+      394,
+      334,
+      124,
+      76,
+      184
+    ];
+    assert.deepEqual(callsForSpecificProvider.durationInSeconds(billObject), durationList)
+  })
+})
