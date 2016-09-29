@@ -6,7 +6,7 @@ describe('mapping the bill', function(){
 
   it('shoul return a map of the bill', function(){
       var result = {};
-    assert.equal(result,mappingTheBill.mappingTheBill('./data-file/ItemisedBill.csv'));
+    assert.deepEqual(result,mappingTheBill.mappingTheBill('./data-file/ItemisedBill.csv'));
     // assert.deepEqual(weekOne, mappingTheWeeks.mappedWeeks("./data-files/week1.csv"));
   })
 });
