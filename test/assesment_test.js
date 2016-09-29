@@ -421,10 +421,15 @@ describe('phone calls', function() {
 
 });
 
-describe('total number of calls for each provider', function(){
+describe('total number of calls for each provider', function() {
 
-  it('shoul return total number of call to MTN', function(){
-    assert.deepEqual(callsForSpecificProvider.totalNoOfCalls(billObject), 2);
+  it('shoul return total number of call to MTN', function() {
+    assert.deepEqual(callsForSpecificProvider.totalNoOfCalls(billObject), {
+      "MTN": 16,
+      "Vodacom": 8,
+      "CellC": 11
+    });
+
   })
 
 })

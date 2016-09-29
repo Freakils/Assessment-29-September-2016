@@ -15,12 +15,12 @@ exports.totalNoOfCalls = function(billObject){
   var totalNoOfCalls = {};
 
     billObject.forEach(function(calls){
-      console.log(calls.provider);
+      //console.log(calls.provider);
       if(totalNoOfCalls[calls.provider] === undefined ){
         totalNoOfCalls[calls.provider] = 0;
       }
 
-        totalNoOfCalls[calls.provider] += totalNoOfCalls[calls.provider];
+        totalNoOfCalls[calls.provider] ++
     })
     console.log(totalNoOfCalls);
     return totalNoOfCalls;
