@@ -437,42 +437,6 @@ describe('total number of calls for each provider', function() {
 describe('', function() {
 
   it('should return', function() {
-    var durationList = [334,
-      94,
-      34,
-      154,
-      394,
-      334,
-      124,
-      76,
-      184,
-      161,
-      551,
-      56,
-      100,
-      334,
-      94,
-      34,
-      127,
-      394,
-      334,
-      159,
-      76,
-      184,
-      161,
-      551,
-      56,
-      100,
-      334,
-      94,
-      34,
-      154,
-      394,
-      334,
-      124,
-      76,
-      184
-    ];
-    assert.deepEqual(callsForSpecificProvider.durationInSeconds(billObject), durationList)
+    assert.deepEqual(callsForSpecificProvider.durationInSeconds("00-01-12"), 72)
   })
 })

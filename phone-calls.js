@@ -26,16 +26,16 @@ exports.totalNoOfCalls = function(billObject){
     return totalNoOfCalls;
 };
 
-exports.durationInSeconds = function(billObject){
-  var durationList = [];
+exports.durationInSeconds = function(duration){
+  // var durationList = [];
 
-  billObject.forEach(function(calls){
-    var duration = calls.duration.split('-');
-    var durationInSec = Number(duration[0]*3600) + Number(duration[1]*60) + Number(duration[2]);
-      console.log(durationInSec);
+  // billObject.forEach(function(calls){
+    var callDuration = duration.split('-');
+    var durationInSec = Number(callDuration[0]*3600) + Number(callDuration[1]*60) + Number(callDuration[2]);
+      // console.log(durationInSec);
 
-      durationList.push(durationInSec);
-  });
-  console.log(durationList);
-  return durationList;
+      // durationList.push(durationInSec);
+  // });
+  console.log(durationInSec);
+  return durationInSec;
 }
