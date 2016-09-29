@@ -28,20 +28,21 @@ exports.mappingTheBill = function(filepath){
                 })
             }
 
-            // console.log(newBillArray);
+            console.log(newBillArray);
+            return newBillArray;
 
-            var billMap = {};
-
-            newBillArray.forEach(function(billList){
-              var provider = billList.provider;
-              var cell = billList.cellNum;
-
-              billMap[cell] = provider;
-
-            // console.log(cell);
-            });
-            
-            console.log(billMap);
-            return billMap;
+            // var billMap = {};
+            //
+            // newBillArray.forEach(function(billList){
+            //   var provider = billList.provider;
+            //   var cell = billList.cellNum;
+            //
+            //   billMap[cell] = provider;
+            //
+            // // console.log(cell);
+            // });
+            //
+            // // console.log(billMap);
+            // return billMap;
 
 };
