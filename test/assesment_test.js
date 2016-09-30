@@ -434,9 +434,31 @@ describe('total number of calls for each provider', function() {
 
 });
 
-describe('', function() {
+describe('duration', function() {
 
-  it('should return', function() {
-    assert.deepEqual(callsForSpecificProvider.durationInSeconds("00-01-12"), 72)
+  it('should return duration of the call in seconds', function() {
+    assert.deepEqual(callsForSpecificProvider.durationInSeconds("00-01-12"), 72);
   })
-})
+});
+
+describe('sort duration', function(){
+  it('order calls in ascending order by duration', function(){
+     var callsAsce = {};
+    assert.equal(callsForSpecificProvider.ascendingByDuration(billObject), callsAsce);
+  })
+});
+// it("should return the prices and sellers of apples, order ascending by price", function() {
+//     assert.deepEqual(pricesOfApples(shops), [{
+//       shop: 'shopwrong',
+//       price: 2
+//     }, {
+//       shop: 'woolingsworth',
+//       price: 4
+//     }, {
+//       shop: 'kwakspar',
+//       price: 4
+//     }, {
+//       shop: 'chockers',
+//       price: 5
+//     }])
+//   });
