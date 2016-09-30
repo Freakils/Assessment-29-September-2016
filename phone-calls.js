@@ -43,6 +43,13 @@ exports.durationInSeconds = function(duration){
 exports.ascendingByDuration = function(billObject){
   var callsAsce = [];
 
-    billObject.forEach(){}
+    billObject.forEach(function(calls){
+      var callDuration = calls.duration.split('-');
+      var durationInSec = Number(callDuration[0]*3600) + Number(callDuration[1]*60) + Number(callDuration[2]);
+
+        callsAsce.push(durationInSec);
+    })
+    console.log(callsAsce);
+    return callsAsce;
 
 }
