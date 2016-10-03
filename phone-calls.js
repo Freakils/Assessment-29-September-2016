@@ -52,4 +52,5 @@ exports.ascendingByDuration = function(billObject){
     console.log(callsAsce);
     return callsAsce;
 
+      callsAsce.sort();
 }
